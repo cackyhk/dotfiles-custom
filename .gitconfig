@@ -2,9 +2,9 @@
 	name = Jeff Lee
 	email = cackyhk@gmail.com
 [filter "lfs"]
-	smudge = git-lfs smudge %f
 	required = true
-	clean = git-lfs clean %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 [core]
 	excludesfile = /Users/cackyhk/.gitignore_global
 [difftool "sourcetree"]
