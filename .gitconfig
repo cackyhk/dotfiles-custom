@@ -1,6 +1,3 @@
-[user]
-	name = Jeff Lee
-	email = cackyhk@gmail.com
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
