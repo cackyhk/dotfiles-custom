@@ -1,15 +1,22 @@
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-[core]
-	excludesfile = /Users/cackyhk/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
 [mergetool "sourcetree"]
 	cmd = /Users/cackyhk/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[user]
+	name = Jeff Lee
+	email = cackyhk@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = /Users/cackyhk/.gitignore_global
+	precomposeunicode = true
+	filemode = false
+	quotepath = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [commit]
 	template = /Users/cackyhk/.stCommitMsg
 [color]
@@ -27,3 +34,5 @@
     diff = diff-highlight | less -R
 [interactive]
 	diffFilter = diff-highlight
+[push]
+	default = simple
