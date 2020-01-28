@@ -1,16 +1,16 @@
 [mergetool "sourcetree"]
-	cmd = /Users/cackyhk/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = ~/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = Jeff Lee
-	email = cackyhk@gmail.com
+	name = {name}
+	email = {email}
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 [core]
-	excludesfile = /Users/cackyhk/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	precomposeunicode = true
 	filemode = false
 	quotepath = false
@@ -18,7 +18,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [commit]
-	template = /Users/cackyhk/.stCommitMsg
+	template = ~/.stCommitMsg
 [color]
 	ui = auto
 [diff]
@@ -36,3 +36,7 @@
 	diffFilter = diff-highlight
 [push]
 	default = simple
+	
+[remote "origin"]
+        prune = true
+
